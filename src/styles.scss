@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import './assets/scss/variables.scss';
+@import './assets/scss/mixins.scss'; 
+
+* {
+    
+}
+
+body {
+    background-color: $white;
+    font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: $font-color;
+}
+
+.m-10 {
+    margin: 10px;
+}
+
+.p-2 {
+    padding: 2px;
+}
+
+.p-5 {
+    padding: 5px;
+}
+
+.p-10 {
+    padding: 10px;
+}

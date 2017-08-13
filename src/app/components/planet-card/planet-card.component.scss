@@ -1,0 +1,45 @@
+@import './../../../styles.scss';
+
+.planet-card-wrapper {
+    .pcard {
+        background-color: $g-white;
+        border-radius: 5px;
+        min-height: 100px;
+        position: relative;
+        width: 150px;
+        padding-bottom: 10px;
+        cursor: pointer;
+
+        @extend .m-10;
+        @include box-shadow(0px 0px 2px);
+
+        .pcard-img {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            width: 100%;
+        }
+
+        &:hover {
+            transition: 300ms ease-in-out;
+            @include box-shadow(0px 0px 6px $a-border-color);
+            .pcard-img {
+                
+            }
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            padding: 5px 5px;
+
+            .planet-name {
+                font-size: 0.8 rem;
+                padding-bottom: 5px;
+            }
+
+            .distance {
+                font-size: 0.7rem;
+            }
+        }
+    }
+}
