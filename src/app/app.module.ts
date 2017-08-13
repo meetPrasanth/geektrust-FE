@@ -8,6 +8,7 @@ import { PlanetCardComponent } from './components/planet-card/planet-card.compon
 import { PlanetsComponent } from './components/planets/planets.component';
 import { VehicleComponent } from './components/vehicle/vehicle.component';
 import { VehiclesComponent } from './components/vehicles/vehicles.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { VehiclesComponent } from './components/vehicles/vehicles.component';
     PlanetCardComponent,
     PlanetsComponent,
     VehicleComponent,
-    VehiclesComponent
+    VehiclesComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
