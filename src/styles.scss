@@ -3,13 +3,12 @@
 @import './assets/scss/mixins.scss'; 
 
 * {
-    
+    color: $font-color;
+    font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
     background-color: $white;
-    font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: $font-color;
     margin: 0px;
 }
 
@@ -27,4 +26,21 @@ body {
 
 .p-10 {
     padding: 10px;
+}
+
+.btn {
+    font-size: 0.9rem;
+    height: 30px;
+    background: cornflowerblue;
+    color: $white;
+    margin: 10px;
+    border: 0px;
+    outline: none;
+    transition: 300ms ease-in-out;
+
+    &:hover {
+        background: $white;
+        color: $font-color;
+        @include box-shadow(0px 0px 4px);
+    }
 }
