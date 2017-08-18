@@ -9,6 +9,7 @@ import { PlanetsComponent } from './components/planets/planets.component';
 import { VehicleComponent } from './components/vehicle/vehicle.component';
 import { VehiclesComponent } from './components/vehicles/vehicles.component';
 import { NavComponent } from './components/nav/nav.component';
+import { HttpModule } from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NavComponent } from './components/nav/nav.component';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     routing
   ],
   providers: [],

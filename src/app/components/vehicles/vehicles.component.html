@@ -1,7 +1,7 @@
 <div class="vehicles-wrapper">
   <div class="vehicles-container">
-    <div *ngFor="let i of arr">
-      <app-vehicle></app-vehicle>
+    <div *ngFor="let vehicle of vehicles">
+      <app-vehicle *ngIf="!vehicle.disabled" [vehicle]="vehicle" (selectEvent)="vehicleOutput($event)"></app-vehicle>
     </div>
   </div>
 </div>

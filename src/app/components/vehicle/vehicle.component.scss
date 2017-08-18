@@ -4,6 +4,9 @@
     .vcard {
         background-color: $g-white;
         border-left: 6px solid cadetblue;
+        border-top: 1px;
+        border-bottom: 1px;
+        border-right: 1px;
         border-radius: 3px;
         cursor: pointer;
         display: flex;
@@ -16,14 +19,26 @@
 
         &:hover {
             transition: 300ms ease-in-out;
-            @include box-shadow(0px 0px 6px black);
-            .pcard-img {
-                
-            }
+            border-top: 1px solid cadetblue;
+            border-bottom: 1px solid cadetblue;
+            border-right: 1px solid cadetblue;
+            transition: 300ms ease-in-out;
+            @include box-shadow(0px 0px 6px cadetblue);
 
-            .vunit{
-                transition: 300ms ease-in-out;
-                @include box-shadow(0px 0px 6px black);
+            .vunit {
+                border: 1px solid cadetblue;
+            }
+        }
+
+        &.selected {
+            border-top: 1px solid cadetblue;
+            border-bottom: 1px solid cadetblue;
+            border-right: 1px solid cadetblue;
+            transition: 300ms ease-in-out;
+            @include box-shadow(0px 0px 6px cadetblue);
+
+            .vunit {
+                border: 1px solid cadetblue;
             }
         }
 
@@ -61,13 +76,17 @@
         .vunit {
             background: $g-white;
             border-radius: 10px;
+            border: 1px;
             height: 20px;
             position: absolute;
             right: -5px;
             top: -5px;
             width: 20px;
-            
-            @include box-shadow(0px 0px 2px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 300ms ease-in-out;
+            @include box-shadow(0px 0px 6px darkcyan);
         }
     }
 }
