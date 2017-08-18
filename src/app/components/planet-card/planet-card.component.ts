@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-planet-card',
@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanetCardComponent implements OnInit {
 
+  @Input() planet: any;
+  @Output() selectEvent: EventEmitter<Object> = new EventEmitter<Object>();
   constructor() { }
 
   ngOnInit() {
+  }
+
+  selectPlanet() {
+    this.planet['selected'] = true;
+    this.selectEvent.emit(
+      { 
+        isSelected : true,
+        planet : this.planet
+      }
+    );
   }
 
 }

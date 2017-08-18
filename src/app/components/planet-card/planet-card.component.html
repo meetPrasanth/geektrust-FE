@@ -1,12 +1,10 @@
 
 <div class="planet-card-wrapper">
-  <div class="pcard"> 
-    <img src="./../../assets/images/planets/donlon.png" class="pcard-img">
+  <div class="pcard" [class.selected]="planet.selected" (click)="selectPlanet()"> 
+    <img src="./../../assets/images/planets/{{planet.name}}.png" class="pcard-img">
     <div class="content">
-      <div class="details">
-        <div class="planet-name"> Donlon </div>
-        <div class="distance"> 100 megamiles </div>
-      </div>
+        <div class="planet-name">{{planet.name}}</div>
+        <div class="distance">{{planet.distance}} megamile</div>
     </div>
   </div>
 </div>

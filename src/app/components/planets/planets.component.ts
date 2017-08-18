@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-planets',
@@ -7,11 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanetsComponent implements OnInit {
 
-  arr: Array<number> = [1,2,3,4,5,6];
+  @Input() planets: any;
+  @Output() stepEvent: EventEmitter<Object> = new EventEmitter<Object>();
+
+  currentStep = 0;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  planetOutput(output) {
+    console.log('output', this.planets, output);
+    this.stepEvent.emit(output);
+  }
 }

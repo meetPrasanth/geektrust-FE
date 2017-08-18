@@ -1,7 +1,8 @@
 <div class="planets-wrapper">
+  <!-- <div class="ptitle">Select a planet</div> -->
   <div class="planets-container">
-    <div *ngFor="let i of arr">
-      <app-planet-card></app-planet-card>
+    <div *ngFor="let planet of planets">
+      <app-planet-card [planet]="planet" (selectEvent)="planetOutput($event)"></app-planet-card>
     </div>
   </div>
 </div>

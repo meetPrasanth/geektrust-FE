@@ -27,13 +27,17 @@
             }
         }
 
+        &.selected {
+            transition: 300ms ease-in-out;
+            @include box-shadow(0px 0px 6px $a-border-color);
+        }
+
         .content {
-            display: flex;
-            justify-content: center;
+            text-align: center;
             padding: 5px 5px;
 
             .planet-name {
-                font-size: 0.8 rem;
+                font-size: 1rem;
                 padding-bottom: 5px;
             }
 
